@@ -1,5 +1,5 @@
-// 3. Use the same rest countries and 
-// print all countries names, regions, sub-region and populations
+// 2. Use the rest countries API URL -> https://restcountries.com/v3.1/all and display all the country flags in the console
+// 3. Use the same rest countries and print all countries names, regions, sub-region and populations
 
 var request= new XMLHttpRequest();
 request.open("GET","https://restcountries.com/v3.1/all")
