@@ -2,8 +2,23 @@
 // a. let obj1 = {name:"Person1", age:5};
 // b. let obj2 = {age:5,name: "Person1"};
 
-var
-remoteJSON = {"allowExternalMembers": "false", "whoCanJoin": "CAN_REQUEST_TO_JOIN"},
-    localJSON = {"whoCanJoin": "CAN_REQUEST_TO_JOIN", "allowExternalMembers": "false"};
-    
-console.log( _.isEqual(remoteJSON, localJSON) );
+var obj1 = {"name":"Person1","age":5};
+var obj2 = {"age":5,"name":"Person1"};
+
+var flag=true;
+
+if(Object.keys(obj1).length==Object.keys(obj2).length){
+    for(key in obj1) { 
+        if(obj1[key] == obj2[key]) {
+            continue;
+        }
+        else {
+            flag=false;
+            break;
+        }
+    }
+}
+else {
+    flag=false;
+}
+console.log("Is Object equal:-"+ flag);
